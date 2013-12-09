@@ -29,7 +29,7 @@ if ('development' == app.get('env')) {
 }
 
 // Database URL and connection Object
-var conString = "postgres://postgres:ankit1234@localhost:5432/nodedb_development";
+var conString = "postgres://appvqvqhl6729n6f:ae3wnu1ak4za2ldicphsk3j2eos414ad@192.168.2.202:14866/t";
 var connection = new pg.Client(conString);
 
 // Connect PostgreSQL
