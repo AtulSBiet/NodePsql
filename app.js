@@ -1,4 +1,3 @@
-
 /**
  * Module dependencies.
  */
@@ -29,7 +28,7 @@ if ('development' == app.get('env')) {
 }
 
 // Database URL and connection Object
-var conString = "postgres://appvqvqhl6729n6f:ae3wnu1ak4za2ldicphsk3j2eos414ad@192.168.2.202:14866/t";
+var conString = "postgres://aqsov36kbodupbs1:a93dpu5gmy9bkjq6y6err25xwqgibnpg@192.168.2.202:17424/t";
 var connection = new pg.Client(conString);
 
 // Connect PostgreSQL
