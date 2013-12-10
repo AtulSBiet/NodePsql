@@ -1,4 +1,3 @@
-
 /**
  * Module dependencies.
  */
@@ -28,6 +27,7 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+console.log("Using COnsole");
 // Database URL and connection Object
 var conString = "postgres://aqsov36kbodupbs1:a93dpu5gmy9bkjq6y6err25xwqgibnpg@192.168.2.202:17424/t";
 var connection = new pg.Client(conString);
