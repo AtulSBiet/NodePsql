@@ -29,7 +29,7 @@ if ('development' == app.get('env')) {
 
 console.log("******************Using Console**************");
 // Database URL and connection Object
-var conString = "postgres://aqsov36kbodupbs1:a93dpu5gmy9bkjq6y6err25xwqgibnpg@192.168.2.202:17424/t";
+var conString = "postgres://ayg0mhzzmfshzwlt:agx6sax0k4732yw2dfe45rh695iw1sn7@172.16.2.167:2769/t";
 var connection = new pg.Client(conString);
 
 // Connect PostgreSQL
