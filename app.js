@@ -40,7 +40,7 @@ connection.connect(function(err) {
 });
 
 // Database setup
-connection.query("CREATE TABLE IF NOT EXISTS users(name varchar(128), email varchar(128), des varchar(256))");
+connection.query("CREATE TABLE IF NOT EXISTS users(id integer, name varchar(128), email varchar(128), des varchar(256))");
 
 // Add a new User
 app.get("/users/new", function (req, res) {
