@@ -29,9 +29,9 @@ if ('development' == app.get('env')) {
 }
 
 // Database URL and connection Object
-var conString = "postgres://aqsov36kbodupbs1:a93dpu5gmy9bkjq6y6err25xwqgibnpg@192.168.2.202:17424/t";
+var conString = "postgres://ayg0mhzzmfshzwlt:agx6sax0k4732yw2dfe45rh695iw1sn7@172.16.2.167:2769/t";
+// var conString = "postgres://postgres:ankit1234@localhost:5432/nodedb_development";
 var connection = new pg.Client(conString);
-
 // Connect PostgreSQL
 connection.connect(function(err) {
   if(err) {
@@ -40,12 +40,13 @@ connection.connect(function(err) {
 });
 
 // Database setup
-connection.query("CREATE TABLE IF NOT EXISTS users(name varchar(128), email varchar(128), des varchar(256))");
+// connection.query('DROP TABLE users');
+connection.query("CREATE TABLE IF NOT EXISTS users(id integer, name varchar(128), email varchar(128), des varchar(256))");
 
 // Add a new User
 app.get("/users/new", function (req, res) {
   res.render("new", {
-    title: 'App42PaaS Express MySql Application'
+    title: 'App42PaaS Express PostgreSQL Application'
   });
 });
 
@@ -54,7 +55,7 @@ app.post("/users", function (req, res) {
   var name=req.body.name;
   var email=req.body.email;
   var des=req.body.des;
-
+  
   connection.query('INSERT INTO users (name,email,des) VALUES ($1,$2,$3) RETURNING id', [name, email, des], function(err, docs) {
     res.redirect('/');
   });
@@ -68,6 +69,6 @@ http.createServer(app).listen(app.get('port'), function(){
 // App root
 app.get('/', function(req, res){
   connection.query('SELECT * FROM users', function(err, docs) { 
-    res.render('users', {users: docs, title: 'App42PaaS Express MySql Application'});
+    res.render('users', {users: docs, title: 'App42PaaS Express PostgreSQL Application'});
   });
 });
