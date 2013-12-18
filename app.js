@@ -1,4 +1,3 @@
-
 /**
  * Module dependencies.
  */
@@ -29,7 +28,7 @@ if ('development' == app.get('env')) {
 }
 
 // Database URL and connection Object
-var conString = "postgres://ayg0mhzzmfshzwlt:agx6sax0k4732yw2dfe45rh695iw1sn7@172.16.2.167:2769/t";
+var conString = "postgres://aewbxkfitegondy2:asdf2e4inedsw3orlxgt1v66toc5rtig@192.168.2.202:2317/t";
 // var conString = "postgres://postgres:ankit1234@localhost:5432/nodedb_development";
 var connection = new pg.Client(conString);
 // Connect PostgreSQL
